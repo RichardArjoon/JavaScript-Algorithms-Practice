@@ -1,17 +1,13 @@
-function titleCase(str) {
-  let titleCaseSentenced = str.split(' ');
-  titleCaseSentenced = titleCaseSentenced.map((word) => {
-    const firstLetter = word.charAt(0).toUpperCase();
+function repeatString(str, num) {
+  // return str.repeat(num);
+  let repeatedString = '';
 
-    word = firstLetter.concat(word.slice(1, word.length));
-
-    return word;
-  });
-
-  titleCaseSentenced = titleCaseSentenced.join(' ');
-
-  return titleCaseSentenced;
+  while (num > 0) {
+    repeatedString += str;
+    num--;
+  }
+  return repeatedString;
 }
 
-console.log(titleCase('I am a coding god'));
-// console.log(titleCase('I would like to work for Google'));
+console.log(repeatString('I am a coding god', 2));
+console.log(repeatString('I would like to work for Google', 3));
